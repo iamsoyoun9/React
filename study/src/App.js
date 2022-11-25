@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import logo from './logo.svg'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+	let posts = '상무지구 고기 맛집';
+	function num(){
+		return 100
+	}
+
+	return (
+		<div className="App">
+			<div className='black-nav'>
+				<div>React 공부</div>
+			</div>
+			<img src={logo} alt="" />
+			<h4>{ posts }</h4>
+			<h4>{ num() }</h4>
+		</div>
+	);
 }
 
 export default App;
