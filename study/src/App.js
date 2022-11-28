@@ -14,12 +14,18 @@ function App() {
 		newArray[0] = '여자코트추천';
 		글제목변경(newArray);
 	}
+	function alignName(){
+		var newArray = [...글제목];
+		newArray.sort();
+		글제목변경(newArray);
+	}
 	return (
 		<div className="App">
 			<div className='black-nav'>
 				<div>React 공부</div>
 			</div>
 			<button onClick={()=>{reName()}}>버튼</button>
+			<button onClick={()=>{alignName()}}>정렬</button>
 			<div className='list'>
 				<h3>{글제목[0]} <span onClick={()=>{좋아요수정(좋아요+1)}}>👍</span> {좋아요} </h3>
 				<p>11월 28일 발행</p>
